@@ -13,22 +13,7 @@ spring:
 #    password: zx12300321
 #    url: jdbc:mysql://127.0.0.1:3306/mytest?useUnicode=true&characterEncoding=utf-8
      driver-class-name: com.mysql.cj.jdbc.Driver
-     url: jdbc:mysql://121.42.13.213:3306/tsdata?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
-     username: root
-     password: zx!12300321
-  mail:
-    host: smtp.163.com
-    username: sf2033@163.com
-    password: BBQXJUJVSWDCOOJK
-    default-encoding: UTF-8
-    properties:
-         smtp:
-           auth: true
-           timeout: 25000
-mail:
-  fromMail:
-    addr: sf2033@163.com
-
+   
 mybatis:
   mapper-locations: classpath:mappers/*.xml
   type-aliases-package: com.myuuutime.entity
