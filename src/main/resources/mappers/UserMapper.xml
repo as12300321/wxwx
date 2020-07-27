@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "../config/mybatis-3-mapper.dtd">
+<mapper namespace="com.myuuutime.mapper.UsersMapper">
+    <resultMap id="BaseResultMap" type="com.myuuutime.entity.User">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="realname" jdbcType="VARCHAR" property="realname" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, username, password, realname
+    </sql>
+    <select id="findAll" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select * from users
+    </select>
+
+    <select id="findOne"  parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select * from users where id=1
+    </select>
+    <insert id="UserSgin">
+
+    </insert>
+</mapper>

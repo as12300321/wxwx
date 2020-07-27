@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "../config/mybatis-3-mapper.dtd">
+<mapper namespace="com.myuuutime.mapper.getFacemapper">
+    <resultMap id="BaseResultMap" type="com.myuuutime.entity.sPhoto">
+        <result column="photo_org" jdbcType="VARCHAR" property="photo_org" />
+        <result column="photo_new" jdbcType="VARCHAR" property="photo_new" />
+        <result column="insert_ts" jdbcType="TIMESTAMP" property="insert_ts" />
+    </resultMap>
+
+    <insert id="addFace"  parameterType="com.myuuutime.entity.sPhoto">
+        insert into savephoto (photo_org,photo_new,insert_ts) values(#{photo_org},#{photo_new},#{insert_ts})
+
+    </insert>
+
+</mapper>

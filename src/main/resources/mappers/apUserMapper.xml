@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "../config/mybatis-3-mapper.dtd">
+<mapper namespace="com.myuuutime.mapper.apusermapper">
+    <resultMap id="BaseResultMap" type="com.myuuutime.entity.apUser">
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="uiphone" jdbcType="VARCHAR" property="uiphone" />
+        <result column="uemail" jdbcType="VARCHAR" property="uemail" />
+        <result column="ucomment" jdbcType="VARCHAR" property="ucomment" />
+        <result column="ifappointment" jdbcType="VARCHAR" property="ifappointment" />
+        <result column="insert_ts" jdbcType="TIMESTAMP" property="insert_ts" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        username, uiphone, uiphone, uemail,ucomment,ifappointment,insert_ts
+    </sql>
+<!--    <select id="findAll" parameterType="java.lang.Integer" resultMap="BaseResultMap">-->
+<!--        select * from users-->
+<!--    </select>-->
+
+<!--    <select id="findOne"  parameterType="java.lang.Integer" resultMap="BaseResultMap">-->
+<!--        select * from users where id=1-->
+<!--    </select>-->
+    <insert id="addApUser" parameterType="com.myuuutime.entity.apUser">
+        insert into apuser (username,uiphone,uemail,ucomment,ifappointment,insert_ts)
+        values (#{username},#{uiphone},#{uemail},#{ucomment},#{ifappointment},#{insert_ts})
+
+    </insert>
+</mapper>
