@@ -5,12 +5,9 @@ spring:
   profiles:
     active: dev
   datasource:
-#    username: fei
-#    password: As!12300321
-#    url: jdbc:mysql://47.102.204.121:3306/mytest?useUnicode=true&characterEncoding=utf-8
-##    driver-class-name:  com.mysql.jdbc.Driver
+
 #    username: root
-#    password: zx12300321
+#    password: root
 #    url: jdbc:mysql://127.0.0.1:3306/mytest?useUnicode=true&characterEncoding=utf-8
      driver-class-name: com.mysql.cj.jdbc.Driver
    
